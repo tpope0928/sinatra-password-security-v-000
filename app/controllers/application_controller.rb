@@ -17,8 +17,8 @@ class ApplicationController < Sinatra::Base
 	end
 
 	post "/signup" do
-		#your code here!
-	end
+  user = User.new(:username => params[:username], :password => params[:password])
+end
 
 	get "/login" do
 		erb :login
